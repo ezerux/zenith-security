@@ -1,0 +1,20 @@
+<Application x:Class="ZenithSecurity.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="UI/MainWindow.xaml">
+  <Application.Resources>
+    <!-- Navy Blue Dark Theme Colors -->
+    <SolidColorBrush x:Key="BgBrush"       Color="#0F1523"/>
+    <SolidColorBrush x:Key="SurfaceBrush"  Color="#131C2E"/>
+    <SolidColorBrush x:Key="RaisedBrush"   Color="#1A2540"/>
+    <SolidColorBrush x:Key="BorderBrush"   Color="#1E2D47"/>
+    <SolidColorBrush x:Key="TextBrush"     Color="#E2E8F0"/>
+    <SolidColorBrush x:Key="MutedBrush"    Color="#64748B"/>
+    <SolidColorBrush x:Key="AccentBrush"   Color="#3B82F6"/>
+    <SolidColorBrush x:Key="Accent2Brush"  Color="#60A5FA"/>
+    <SolidColorBrush x:Key="CriticalBrush" Color="#EF4444"/>
+    <SolidColorBrush x:Key="HighBrush"     Color="#F97316"/>
+    <SolidColorBrush x:Key="MediumBrush"   Color="#EAB308"/>
+    <SolidColorBrush x:Key="LowBrush"      Color="#22C55E"/>
+  </Application.Resources>
+</Application>

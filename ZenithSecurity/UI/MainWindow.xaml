@@ -1,0 +1,68 @@
+<Window x:Class="ZenithSecurity.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        Title="Zenith Local Security Dashboard v4.0"
+        Width="1280" Height="800"
+        MinWidth="1000" MinHeight="600"
+        WindowStartupLocation="CenterScreen"
+        Background="#0F1523">
+
+  <Window.TaskbarItemInfo>
+    <TaskbarItemInfo Description="Zenith Local Security Dashboard"/>
+  </Window.TaskbarItemInfo>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="24"/>
+    </Grid.RowDefinitions>
+
+    <!-- Title bar -->
+    <Border Grid.Row="0" Background="#131C2E" BorderBrush="#1E2D47"
+            BorderThickness="0,0,0,1" Padding="16,10">
+      <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
+          <TextBlock Text="🛡" FontSize="20" VerticalAlignment="Center" Margin="0,0,10,0"/>
+          <StackPanel>
+            <TextBlock Text="Zenith Local Security Dashboard"
+                       Foreground="#E2E8F0" FontFamily="Segoe UI" FontWeight="SemiBold" FontSize="14"/>
+            <TextBlock Text="v4.0 · Local Security Monitor"
+                       Foreground="#64748B" FontFamily="Segoe UI" FontSize="11"/>
+          </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Right"
+                    HorizontalAlignment="Right" VerticalAlignment="Center">
+          <TextBlock x:Name="TbStatus" Text="● Ready"
+                     Foreground="#22C55E" FontFamily="Segoe UI Mono" FontSize="11"
+                     VerticalAlignment="Center" Margin="0,0,16,0"/>
+          <Button x:Name="BtnRefresh" Content="↺ Refresh"
+                  Click="BtnRefresh_Click"
+                  Background="#1A2540" Foreground="#60A5FA"
+                  BorderThickness="1" BorderBrush="#1E2D47"
+                  Padding="10,5" FontFamily="Segoe UI" FontSize="11" Cursor="Hand"/>
+        </StackPanel>
+      </DockPanel>
+    </Border>
+
+    <!-- WebView2 fills the main area -->
+    <wv2:WebView2 x:Name="WebView" Grid.Row="1"
+                  DefaultBackgroundColor="#0F1523"/>
+
+    <!-- Status bar -->
+    <Border Grid.Row="2" Background="#131C2E" BorderBrush="#1E2D47"
+            BorderThickness="0,1,0,0" Padding="12,0">
+      <DockPanel>
+        <TextBlock x:Name="TbStatusBar"
+                   Text="Zenith Local Security Dashboard v4.0 · Running"
+                   Foreground="#64748B" FontFamily="Segoe UI" FontSize="10"
+                   VerticalAlignment="Center"/>
+        <TextBlock x:Name="TbTime"
+                   Foreground="#64748B" FontFamily="Segoe UI Mono" FontSize="10"
+                   HorizontalAlignment="Right" VerticalAlignment="Center"
+                   DockPanel.Dock="Right"/>
+      </DockPanel>
+    </Border>
+  </Grid>
+</Window>
